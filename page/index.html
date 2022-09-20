@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url('header.png');" class="w-full h-full bg-cover">
+
+    <div id="about-modal" class="fixed w-full h-full" style="display: none;">
+        <div id="background-modal" class="fixed bg-black top-0 right-0 left-0 bottom-0 opacity-75"></div>
+        <div class=" rounded bg-white absolute outline-none " style="width: 80%; margin-left: 10%; height: 80%; margin-top: 1%;">
+            <center><h1 class="text-3xl select-none ">Everything is an expression.</h1></center>
+            <center><span>Applications are written the way they are in JavaScript, by putting parentheses after an expression and having any number of arguments between those parentheses, separated by commas.</span></center>
+            <center><h2 class="mt-4">do() - main function that you always need to use on start of your app.</h2></center>
+            <center><h2 class="mt-4">define(name, value) - use it to create a new binding.</h2></center>
+            <center><h2 class="mt-4">set(name, value) - use it to reassign a binding.</h2></center>
+            <center><h2 class="mt-4">while(condition) - creates a loop with condition, loop stops if the condition is false
+                <h2>(also you need to use do() to designate body of loop)</h2>
+            </h2></center>
+            <center><h2 class="mt-4">if(name, value) - expects exactly three arguments.
+                <h2>( if(<(a, b)) )</h2>
+            </h2></center>
+            <center><h2 class="mt-4">fun(name, args, body) - creates a new function.</h2></center>
+            <center><h2 class="mt-4">print(value) - writes value in output block.</h2></center>
+            <center><h2 class="mt-4">pow(value, degree) - use it to exponentiate value.</h2></center>
+            <center><h2 class="mt-6">Also u can type comments with '#' after this character the rest of the text on the line will not be executed.</h2></center>
+            <center><h2 class="mt-32">Chek <a class=" text-orange-700" href="https://eloquentjavascript.net/12_language.html">this</a> to create this language step by step</h2></center>
+        </div>
+    </div>
+    <div class="text-indigo-400 m-6 bg-cover bg-fixed" >
+        <div class="flex flex-row mt-2 ">
+            <div class="md:pt-36 md:w-1/2 p-1 flex flex-col">
+                <div class="flex-raw flex ">
+                    <h1 class="bg-clip-text text-transparent bg-gradient-to-r from-gray-500 to-red-400 text-6xl select-none">Input</h1>
+                    <button class="ml-5 select-none text-4xl text-orange-300" id="send-code">→</button>
+                    <button class="ml-5 select-none text-4xl text-orange-300" id="clear-responce">c</button>
+                </div>
+                <textarea class="bg-gray-900 border-gray-800 rounded-2xl shadow outline-none text-3xl resize-none scroll-m-0 text-orange-400" id="user-code" name="code" cols="60" rows="13"></textarea>
+            </div>
+            <div class="md:pt-36 md:w-1/2 p-1 flex flex-col ">
+                <div class="flex-raw flex">
+                    <h1 class="bg-clip-text text-transparent bg-gradient-to-r from-gray-500 to-red-400 text-6xl select-none">Output</h1>
+                </div>
+                <textarea class="bg-gray-900 border-gray-800 rounded-2xl shadow outline-none text-3xl resize-none scroll-m-0 text-orange-200" disabled id="server-responce" name="code" cols="60" rows="13"></textarea>
+            </div>
+        </div>
+    </div>
+        
+        <center><button class="mt-20 select-none text-4xl text-orange-300" id="show-modal">ABOUT</button></center>
+        
+    <script src="./script.js"></script>
+</body>
+</html>
